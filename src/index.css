@@ -1,13 +1,119 @@
-body {
+body, * {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fontgaramond);
+  scroll-behavior: smooth;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root{
+  --teal: #768D89;
+  --offWhite: #F6F6F6;
+  --fontBodoni: "Bodoni Moda", serif;
+  --fontgaramond: "EB Garamond", serif;
+}
+
+/* //special classes  */
+.whatsappIcon{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.whatsappIcon img{
+  width: 80px;
+  height: 80px;
+}
+.background{
+  background-image: url('./assets/WhatsApp\ Image\ 2024-09-08\ at\ 07.37.12.jpeg');
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+}
+section .container-fluid{
+  padding: 5% 8%;
+}
+.heading, .navbar-brand{
+  font-family: var(--fontBodoni);
+}
+
+/* //navbar navbar */
+nav{
+  background: var(--teal);
+}
+nav .container-fluid{
+  padding: 1% 8% ;
+}
+.nav-link {
+  text-transform: capitalize;
+  font-size: larger;
+}
+.navbar-brand {
+  font-size: xx-large;
+}
+
+/* //header section */
+.header{
+height: 100vh;
+}
+@media (max-width:767px) {
+  .header{
+    height: 20vh;
+  }
+}
+
+
+/* //welcome */
+
+.w-grid > div{
+  height: 600px;
+  margin: 2% 0;
+}
+@media (max-width:767px) {
+  .w-grid > div{
+    height: 400px;
+  }
+}
+.w-grid h3{
+text-transform: uppercase;
+}
+.living, .bed, .swimming{
+  background-size:cover;
+  color: white;
+  background-position: center center;
+  
+}
+.w-backdrop{
+  backdrop-filter: brightness(65%) contrast(110%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+.living{
+  background-image: url('./assets/WhatsApp\ Image\ 2024-09-14\ at\ 10.22.58.jpeg');
+}
+.bed{
+  background-image: url('./assets/WhatsApp\ Image\ 2024-09-14\ at\ 10.23.27.jpeg');
+}
+.swimming{
+  background-image: url('./assets/WhatsApp\ Image\ 2024-09-14\ at\ 10.23.41.jpeg');
+  background-size: cover;
+}
+
+/* room seciton */
+.room{
+  background: var(--offWhite);
 }
