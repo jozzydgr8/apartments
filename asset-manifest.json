@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/apartments/static/css/main.647f4205.css",
-    "main.js": "/apartments/static/js/main.03846f83.js",
+    "main.js": "/apartments/static/js/main.97acbfb6.js",
     "static/js/453.ad82e67d.chunk.js": "/apartments/static/js/453.ad82e67d.chunk.js",
     "static/media/WhatsApp Image 2024-09-14 at 10.23.27.jpeg": "/apartments/static/media/WhatsApp Image 2024-09-14 at 10.23.27.00471c14444915f3fa86.jpeg",
     "static/media/WhatsApp Image 2024-09-14 at 10.22.58.jpeg": "/apartments/static/media/WhatsApp Image 2024-09-14 at 10.22.58.fc683f38bd8bc7cf2231.jpeg",
@@ -9,11 +9,11 @@
     "static/media/WhatsApp Image 2024-09-08 at 07.37.12.jpeg": "/apartments/static/media/WhatsApp Image 2024-09-08 at 07.37.12.5abf8f9a57efebb62127.jpeg",
     "index.html": "/apartments/index.html",
     "main.647f4205.css.map": "/apartments/static/css/main.647f4205.css.map",
-    "main.03846f83.js.map": "/apartments/static/js/main.03846f83.js.map",
+    "main.97acbfb6.js.map": "/apartments/static/js/main.97acbfb6.js.map",
     "453.ad82e67d.chunk.js.map": "/apartments/static/js/453.ad82e67d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.647f4205.css",
-    "static/js/main.03846f83.js"
+    "static/js/main.97acbfb6.js"
   ]
 }
