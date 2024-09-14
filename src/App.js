@@ -11,6 +11,11 @@ function App() {
         <Route index element={<Home/>} />
         </Route>
 
+
+        <Route path="/apartments" element={<Layout/>}>
+        <Route index element={<Home/>} />
+        </Route>
+
       </>
     )
   )
