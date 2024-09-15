@@ -117,3 +117,25 @@ text-transform: uppercase;
 .room{
   background: var(--offWhite);
 }
+
+/* essential section */
+.e-grid{
+  margin: 4% 0;
+  font-size: large;
+  padding: 0 4%;
+}
+.e-div{
+  background: var(--teal);
+  width: 50%;
+  padding: 5px;
+  margin: 4px 0;
+}
+.e-grid img{
+  width: 60px;
+  height: 60px;
+}
+.row > .col-md-2 {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
