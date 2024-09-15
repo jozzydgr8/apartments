@@ -139,3 +139,10 @@ text-transform: uppercase;
   align-items: center;
   justify-content: center; */
 }
+
+.footer{
+  background-image: url('./assets/WhatsApp\ Image\ 2024-09-14\ at\ 10.22.58.jpeg');
+  background-size: cover;
+  background-position: center center;
+  color: white;
+}

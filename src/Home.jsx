@@ -3,6 +3,8 @@ import Header from './Pages/Header'
 import Welcome from './Pages/Welcome'
 import { Rooms } from './Pages/Rooms'
 import { Essentials } from './Pages/Essentials'
+import { Footer } from './Pages/Footer'
+import { Bottom } from './Pages/Bottom'
 
 function Home() {
   return (
@@ -11,6 +13,8 @@ function Home() {
       <Welcome/>
       <Rooms/>
       <Essentials/>
+      <Footer/>
+      <Bottom/>
     </div>
   )
 }
