@@ -34,11 +34,13 @@ code {
   width: 80px;
   height: 80px;
 }
-.background{
-  background-image: url('./assets/WhatsApp\ Image\ 2024-09-08\ at\ 07.37.12.jpeg');
+.background ,.living, .bed, .swimming,.r-grid .one, .r-grid .two, .r-grid .three, .footer{
   background-position: center center;
   background-repeat: none;
   background-size: cover;
+}
+.background{
+  background-image: url('./assets/WhatsApp\ Image\ 2024-09-08\ at\ 07.37.12.jpeg');
 }
 section .container-fluid{
   padding: 5% 8%;
@@ -88,10 +90,7 @@ height: 100vh;
 text-transform: uppercase;
 }
 .living, .bed, .swimming{
-  background-size:cover;
   color: white;
-  background-position: center center;
-  
 }
 .w-backdrop{
   backdrop-filter: brightness(65%) contrast(110%);
@@ -110,14 +109,29 @@ text-transform: uppercase;
 }
 .swimming{
   background-image: url('./assets/WhatsApp\ Image\ 2024-09-14\ at\ 10.23.41.jpeg');
-  background-size: cover;
 }
 
 /* room seciton */
 .room{
   background: var(--offWhite);
 }
-
+.r-grid > div{
+  background: white;
+  height: 800px;
+}
+.r-grid .one, .r-grid .two, .r-grid .three{
+  height: 400px;
+  width: 100%;
+}
+.r-grid .one{
+  background-image: url('./assets/WhatsApp\ Image\ 2024-09-14\ at\ 10.23.27.jpeg');
+}
+.r-grid .two{
+  background-image: url('./assets/WhatsApp\ Image\ 2024-09-15\ at\ 10.11.42.jpeg');
+}
+.r-grid .three{
+  background-image: url('./assets/WhatsApp\ Image\ 2024-09-15\ at\ 10.11.42.jpeg');
+}
 /* essential section */
 .e-grid{
   margin: 4% 0;
@@ -141,8 +155,6 @@ text-transform: uppercase;
 }
 
 .footer{
-  background-image: url('./assets/WhatsApp\ Image\ 2024-09-14\ at\ 10.22.58.jpeg');
-  background-size: cover;
-  background-position: center center;
+  background-image: url('./assets/WhatsApp\ Image\ 2024-09-15\ at\ 09.47.13.jpeg');
   color: white;
 }
