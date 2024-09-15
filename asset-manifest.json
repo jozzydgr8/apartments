@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/apartments/static/css/main.e0decb24.css",
-    "main.js": "/apartments/static/js/main.e6088c1c.js",
+    "main.css": "/apartments/static/css/main.7aecebe5.css",
+    "main.js": "/apartments/static/js/main.ea3d69dc.js",
     "static/js/453.ad82e67d.chunk.js": "/apartments/static/js/453.ad82e67d.chunk.js",
     "static/media/WhatsApp Image 2024-09-14 at 10.23.27.jpeg": "/apartments/static/media/WhatsApp Image 2024-09-14 at 10.23.27.00471c14444915f3fa86.jpeg",
     "static/media/WhatsApp Image 2024-09-14 at 10.22.58.jpeg": "/apartments/static/media/WhatsApp Image 2024-09-14 at 10.22.58.fc683f38bd8bc7cf2231.jpeg",
     "static/media/WhatsApp Image 2024-09-14 at 10.23.41.jpeg": "/apartments/static/media/WhatsApp Image 2024-09-14 at 10.23.41.755704790c9142a44efe.jpeg",
     "static/media/WhatsApp Image 2024-09-08 at 07.37.12.jpeg": "/apartments/static/media/WhatsApp Image 2024-09-08 at 07.37.12.5abf8f9a57efebb62127.jpeg",
     "index.html": "/apartments/index.html",
-    "main.e0decb24.css.map": "/apartments/static/css/main.e0decb24.css.map",
-    "main.e6088c1c.js.map": "/apartments/static/js/main.e6088c1c.js.map",
+    "main.7aecebe5.css.map": "/apartments/static/css/main.7aecebe5.css.map",
+    "main.ea3d69dc.js.map": "/apartments/static/js/main.ea3d69dc.js.map",
     "453.ad82e67d.chunk.js.map": "/apartments/static/js/453.ad82e67d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0decb24.css",
-    "static/js/main.e6088c1c.js"
+    "static/css/main.7aecebe5.css",
+    "static/js/main.ea3d69dc.js"
   ]
 }
