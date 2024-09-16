@@ -5,12 +5,14 @@ import { Rooms } from './Pages/Rooms'
 import { Essentials } from './Pages/Essentials'
 import { Footer } from './Pages/Footer'
 import { Bottom } from './Pages/Bottom'
+import { AboutSection } from './Pages/AboutSection'
 
 function Home() {
   return (
     <div>
       <Header/>
       <Welcome/>
+      <AboutSection />
       <Rooms/>
       <Essentials/>
       <Footer/>

@@ -25,6 +25,7 @@ code {
   --fontBodoni: "Bodoni Moda", serif;
   --fontgaramond: "EB Garamond", serif;
   --primary:rgb(56, 56, 56);
+  --secondary:#abb8c3;
 }
 
 a{
@@ -101,7 +102,7 @@ height: 100vh;
 .w-grid h3{
 text-transform: uppercase;
 }
-.living *, .bed *, .swimming *, .footer *{
+.living *, .bed *, .swimming *, .footer *, .a-grid *{
   color: white;
 }
 .w-backdrop{
@@ -123,6 +124,29 @@ text-transform: uppercase;
   background-image: url('./assets/WhatsApp\ Image\ 2024-09-14\ at\ 10.23.41.jpeg');
 }
 
+/* about section about section */
+.a-grid {
+  background: black;
+  min-height: 600px;
+}
+.a-grid small{
+  color: var(--teal);
+  font-weight: lighter;
+}
+.a-grid h1{
+  color: var(--secondary);
+  font-weight: lighter;
+}
+@media (max-width:767px) {
+  .a-grid{
+    min-height: 400px;
+  }
+}
+.a-background{
+  background-image: url('./assets/WhatsApp Image 2024-09-14 at 10.22.58.jpeg');
+  background-size: cover;
+
+}
 /* room seciton */
 .room{
   background: var(--offWhite);
@@ -130,7 +154,9 @@ text-transform: uppercase;
 .r-grid > div{
   background: white;
   height: auto;
+  margin-top: 15px;
 }
+
 .r-grid main{
   padding: 5% 4%;
 }
