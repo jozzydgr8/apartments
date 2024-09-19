@@ -9,9 +9,12 @@ function Welcome() {
                 Welcome to Mag's resident
             </h3>
             <p style={{fontSize:'x-large'}}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit molestias sunt, veritatis
-                 natus deserunt non dignissimos cumque accusamus, voluptas est ut tempore dicta beatae magni?
-                  Distinctio sapiente sit dolorum ad!
+              Mag's residence offers a luxurious serviced apartments located in the heart of
+              Osubi, Warri, Delta State. Our apartment is fully equipped and just a 5-minutes 
+              drive from the shopping centers and recreational facilities.
+              We provide exclusive and affordable one-bedroom to four-bedroom apartments designed
+              to meet the needs of our distinguished clients within Africa and the world at large.
+
             </p>
             <WelcomeGrid/>
         </div>

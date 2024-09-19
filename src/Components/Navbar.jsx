@@ -1,3 +1,4 @@
+import { a, Link } from "react-router-dom"
 
 function Navbar() {
   return (
@@ -11,16 +12,16 @@ function Navbar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+          <Link className="nav-link active" aria-current="page" href="#">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">rooms</a>
+          <a className="nav-link active" aria-current="page" href="/apartments#rooms">rooms</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">services</a>
+          <a className="nav-link active" aria-current="page" href="/apartments#services">services</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">contact us</a>
+          <a className="nav-link active" aria-current="page" href="https://wa.link/b8xq56">contact us</a>
         </li>
 
       </ul>

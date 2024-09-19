@@ -1,27 +1,33 @@
+import { Link } from "react-router-dom"
+
 export const Footer = ()=>{
     return(
         <section className="footer">
-            <div className="container-fluid" style={{backdropFilter:'brightness(45%) contrast(120%)'}}>
+            <div className="container-fluid" style={{backdropFilter:'brightness(30%) contrast(120%)'}}>
                 <div className="row">
                     <div className="col-md-4">
                         <div>
-                            <h1 className="heading">About Us</h1>
+                            <h1 className="heading">About Mag's Resident</h1>
                             <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                               Necessitatibus saepe illo placeat iusto nobis eos aliquid 
-                               dolores maiores numquam error!
+                            We provide exclusive and affordable one-bedroom 
+                            to four-bedroom apartments designed to meet the 
+                            needs of our distinguished clients within Africa and the world at large.
                             </p>
                         </div>
                     </div>
                     <div className="col-md-4">
                        <div>
                         <h1 className="heading">
-                            Contact Us
+                            Contact Details
                         </h1>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Obcaecati veritatis voluptatem illum, recusandae magnam
-                            impedit laborum placeat quam fugiat nulla!
+                            Address: No.172B Niyi street, Osubi Warri, Delta State.
+                            <br/>
+                            <br/>
+                            Phone No: +234 811 365 7622
+                            <br/>
+                            <br />
+                            Email: <a href="mailto:magsresidence@gmail.com">magsresidence@gmail.com</a>
                         </p>
                        </div>
                     </div>
@@ -31,9 +37,11 @@ export const Footer = ()=>{
                             Quick links
                         </h1>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Obcaecati veritatis voluptatem illum, recusandae magnam
-                            impedit laborum placeat quam fugiat nulla!
+                            <Link to="https://wa.link/b8xq56">Reach Out</Link>
+                            <hr />
+                            <Link to="/apartments">Our Apartments</Link>
+                            <hr />
+                            <Link to="/">privacy policy</Link>
                         </p>
                        </div>
                     </div>

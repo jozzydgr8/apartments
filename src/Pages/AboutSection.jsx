@@ -1,6 +1,6 @@
 export const AboutSection = ()=>{
     return(
-        <section style={{background:'black'}}>
+        <section>
             
                 <div className="row">
                     <div className=" a-grid a-background col-md-6">
@@ -16,11 +16,13 @@ export const AboutSection = ()=>{
                             </h1>
                             <br/>
                             <p>
-                               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                               Ea iste, blanditiis accusantium at saepe iusto unde laborum pariatur aut odio!
+                               Our prime location at 172b Niyi street, Osubi, offers convenience and ease of access,
+                               making it a preferred destination for leisure and business stays in Delta State.
                                <br/>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, placeat.
+                               <br/>
+                               Experience comfort, privacy, and elegance within a peaceful and secure environment.
                             </p>
+      
                         </div>
                     </div>
                 </div>

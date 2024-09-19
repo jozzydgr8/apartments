@@ -1,6 +1,6 @@
 export const Essentials = ()=>{
     return(
-        <section>
+        <section id="services">
             <div className="container-fluid">
                 <h1 className="heading" style={{textAlign:'center'}}>Our Essentials</h1>
                 <>
@@ -13,10 +13,10 @@ export const Essentials = ()=>{
                                 <img src='https://cdn-icons-png.flaticon.com/512/90/90675.png'alt="lounge"/>
                             </div>
                             <div className="col-md-10">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                 Aliquam nostrum aliquid quas ipsam molestiae quidem cupiditate natus ullam odit nisi!
+                                Unwind in our cozy atmosphere with plush seating, delecious snacks, and a great selection of
+                                beverages. Our lounge, the perfect spot for relaxation and entertainment.
                             <div className="e-div">
-                                unlimited wifi
+                                Perfect Lounge
                             </div>
                             </div>
                         </div>
@@ -30,10 +30,10 @@ export const Essentials = ()=>{
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy1VqMGxOYQnYMNRms65wJ0YTavyFTKKo6pA&s" alt="swim"/>
                             </div>
                             <div className="col-md-10">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Aliquam nostrum aliquid quas ipsam molestiae quidem cupiditate natus ullam odit nisi!
+                            Dive into luxury at our premier swimming pool! Whether you're looking to swim laps,
+                            relax by the poolside, or enjoy a refreshing dip, Our pool provides the perfect escape.
                             <div className="e-div">
-                                unlimited wifi
+                                Swimming Pool
                             </div>
                             </div>
                         </div>
@@ -47,10 +47,9 @@ export const Essentials = ()=>{
                             <img src="https://www.freeiconspng.com/uploads/wifi-icon-line-5.png" alt="wifi" />
                             </div>
                             <div className="col-md-10">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Aliquam nostrum aliquid quas ipsam molestiae quidem cupiditate natus ullam odit nisi!
+                            High Speed Broadband Internet guaranteed across all the room via our unlimited free wifi that never disappoints
                             <div className="e-div">
-                                unlimited wifi
+                                Unlimited Wifi
                             </div>
                             </div>
                     </div>
@@ -63,10 +62,13 @@ export const Essentials = ()=>{
                                 <img src='https://png.pngtree.com/png-vector/20190811/ourmid/pngtree-power-energy-icon-vector-isolated-png-image_1686577.jpg' alt="energy"/>
                             </div>
                             <div className="col-md-10">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Aliquam nostrum aliquid quas ipsam molestiae quidem cupiditate natus ullam odit nisi!
+                            We're well equipped with several alternative power supplies,
+                            therefore our lights don't go off. 24 hours power supply guaranteed.
+                            
+
+
                             <div className="e-div">
-                                unlimited wifi
+                                Power Supply
                             </div>
                             </div>
                     </div>
