@@ -15,13 +15,24 @@ export const IdLayout = ()=>{
         }
         console.log(temp)
     }, [data, id]);
+    const url = 
+    temp && temp.fileUrls && temp.fileUrls.map(item=>(
+        item.url
+    ))
 if(!temp){
     return
 }
     return(
         <section>
+            <div className='IdBackground' style={{backgroundImage: `url(${url})`}}>
+                <div className="IdHeader">
+                    <h2 className='heading'>{temp.daily}</h2>
+                    <div><span> NAIRA <br/> / PER NIGHT</span></div>
+                </div>
+                
+            </div>
             <div className="container-fluid">
-                <h1>{temp.apartment}</h1>
+                <h1 className='heading'>{temp.apartment}</h1>
                 <div className="row">
                 <div className='col-md-8'>
                 <div id="carouselExample" className="carousel slide">
@@ -48,9 +59,9 @@ if(!temp){
                     </p>
                     <hr />
                     <div>
-                        <h3 className='heading'>
+                        <h1 className='heading'>
                             Room Services
-                        </h3>
+                        </h1>
                         <div className="row">
                         <div className="col-md-4">
                                 Bedroom Apartment
@@ -77,7 +88,16 @@ if(!temp){
 
                 </div>
                 <div className="col-md-4">
-                    
+                    <div className='IdBooking'>
+                        <h3 className='heading'>Book Now</h3>
+                        <form>
+                            <input placeholder='checkin' /> <br />
+                            <input placeholder='checkout' />
+                            <input placeholder='guests'/>
+                            <input placeholder='' />
+                            <button type='submit'>Book Now</button>
+                        </form>
+                    </div>
                 </div>
                 </div>
                 <hr />
