@@ -34,6 +34,9 @@ a{
 }
 
 /* //special classes  */
+.carousel-item{
+  height: 400px;
+}
 .whatsappIcon{
   position: fixed;
   bottom: 20px;
@@ -44,7 +47,7 @@ a{
   width: 80px;
   height: 80px;
 }
-.background ,.living, .bed, .swimming,.r-grid .one, .r-grid .two, .r-grid .three, .footer{
+.background ,.living, .bed, .swimming,.r-grid .one, .r-grid .two, .r-grid .three, .footer, .carousel-item{
   background-position: center center;
   background-repeat: none;
   background-size: cover;
@@ -172,15 +175,7 @@ text-transform: uppercase;
   height: 400px;
   width: 100%;
 }
-.r-grid .one{
-  background-image: url('./assets/WhatsApp\ Image\ 2024-09-14\ at\ 10.23.27.jpeg');
-}
-.r-grid .two{
-  background-image: url('./assets/WhatsApp\ Image\ 2024-09-15\ at\ 10.11.42.jpeg');
-}
-.r-grid .three{
-  background-image: url('./assets/WhatsApp\ Image\ 2024-09-15\ at\ 10.11.42.jpeg');
-}
+/* */
 .r-grid .heading{
   margin-bottom: 40px;
 }
