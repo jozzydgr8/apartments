@@ -15,7 +15,6 @@ function Home() {
       <AboutSection />
       <Rooms/>
       <Essentials/>
-      <Footer/>
       <Bottom/>
     </div>
   )
