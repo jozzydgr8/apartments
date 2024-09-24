@@ -9,6 +9,7 @@ import { UseContextData } from './ContextFolder/Context/UseContextData';
 import { Loading } from "./Components/Loading";
 import { IdLayout } from "./Components/IdLayout";
 import { UseContextAuth } from "./ContextFolder/Context/UseContextAuth";
+import { Register } from "./User/Register";
 
 
 
@@ -105,12 +106,14 @@ function App() {
         <Route path="/" element={<Layout/>}>
         <Route index element={<Home/>} />
         <Route path=":id" element={<IdLayout/>} />
+        <Route path="register" element={<Register/>}/>
         </Route>
 
 
         <Route path="/apartments" element={<Layout/>}>
         <Route index element={<Home/>} />
         <Route path=":id" element={<IdLayout/>} />
+        <Route path="register" element={<Register/>}/>
         </Route>
 
       </>

@@ -149,7 +149,7 @@ if(!temp){
                             
                             </div>
                             
-                            <button type='submit' onClick={handleBooking}>Book Now</button>
+                           {register ? <Link className='regBtn' to='/register'>register now</Link> : <button type='submit' onClick={handleBooking}>Book Now</button>} 
 
                             {
                                 register && <Link to='/register'>{register}</Link>
