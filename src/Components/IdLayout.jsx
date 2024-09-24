@@ -1,13 +1,18 @@
 import { useEffect, useState } from 'react'
 import Similar from './Similar'
 import { UseContextData } from '../ContextFolder/Context/UseContextData';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { DatePicker } from 'antd';
+import {UseContextAuth} from '../ContextFolder/Context/UseContextAuth'
+import { signOut } from 'firebase/auth';
+import { auth } from '../App';
 export const IdLayout = ()=>{
     const [temp, setTemp] = useState(null);
     const {data} = UseContextData();
     const {id} = useParams();
-    const [guest, setGuest] = useState(1)
+    const {user} = UseContextAuth();
+    const [guest, setGuest] = useState(1);
+    const [register, setRegister] = useState(null)
     useEffect(() => {
         const template = data && data.find(item => item.id === id);
 
@@ -20,9 +25,22 @@ export const IdLayout = ()=>{
     temp && temp.fileUrls && temp.fileUrls.map(item=>(
         item.url
     ))
+    
+
+    //functions component functions
+    const handleBooking = async (e)=>{
+        e.preventDefault();
+        if (!user){
+            setRegister('you need to register to save reservations on this website');
+            return
+        }
+
+    }
+    console.log(register)
 if(!temp){
     return
 }
+
     return(
         <section>
             <div className='IdBackground' style={{backgroundImage: `url(${url})`}}>
@@ -131,7 +149,11 @@ if(!temp){
                             
                             </div>
                             
-                            <button type='submit'>Book Now</button>
+                            <button type='submit' onClick={handleBooking}>Book Now</button>
+
+                            {
+                                register && <Link to='/register'>{register}</Link>
+                            }
                         </form>
                     </div>
                 </div>

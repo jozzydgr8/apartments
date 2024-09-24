@@ -1,4 +1,5 @@
 import {getFirestore, collection, onSnapshot, query, where} from "firebase/firestore";
+import {getAuth, onAuthStateChanged} from 'firebase/auth'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import Layout from './Layout';
 import Home from './Home';
@@ -7,6 +8,7 @@ import { initializeApp } from "firebase/app";
 import { UseContextData } from './ContextFolder/Context/UseContextData';
 import { Loading } from "./Components/Loading";
 import { IdLayout } from "./Components/IdLayout";
+import { UseContextAuth } from "./ContextFolder/Context/UseContextAuth";
 
 
 
@@ -27,10 +29,16 @@ const app = initializeApp(firebaseConfig);
 //firebase method
 export const db = getFirestore();
 export const colRef = collection(db, 'apartment');
+export const auth = getAuth();
+export const userRef = collection(db, 'user')
+
+
 
 
 function App() {
   const {dispatch, loading} = UseContextData();
+  const { loading:load, dispatch:dis} = UseContextAuth();
+
 
   useEffect(() => {
     dispatch({ type: 'loading', payload: true });
@@ -54,7 +62,39 @@ function App() {
     return () => unSubscribe();
   }, []);
 
-  if(loading){
+
+  // check auth
+  useEffect(()=>{
+    dis({type:'loading', payload:true})
+    const order = async ()=>{
+      try{
+        const unsubscribe = onAuthStateChanged(auth, user=>{
+          if(user){
+            const user = auth.currentUser;
+            dis({type:'signUser', payload:user});
+            console.log('signed in')
+          }else{
+            dis({type:'signUser', payload:null});
+            console.log('logged out')
+          }
+
+        })
+      }catch(error){
+        console.error(error)
+      }
+    }
+
+    order();
+
+  
+        
+    
+    return ()=>{
+      order();
+    }
+  },[]);
+
+  if(loading || load){
     return(<>
     <Loading/>
     </>)

@@ -4,15 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ContextData } from './ContextFolder/Context/ContextData';
+import { ContextAuth } from './ContextFolder/Context/ContextAuth';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   <React.StrictMode>
-  
+    <ContextAuth>
+
+ 
     <ContextData>
       <App />
     </ContextData>
+
+    </ContextAuth>
     
   </React.StrictMode>
 );
