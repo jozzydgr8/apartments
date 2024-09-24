@@ -105,7 +105,7 @@ height: 100vh;
 .w-grid h3{
 text-transform: uppercase;
 }
-.living *, .bed *, .swimming *, .footer *, .a-grid *, .IdHeader *{
+.living *, .bed *, .swimming *, .footer *, .a-grid *, .IdHeader *,.IdBooking button{
   color: white;
 }
 .w-backdrop{
@@ -230,4 +230,29 @@ text-transform: uppercase;
 }
 .IdBooking{
   background: var(--secondary);
+  padding: 2% 5%;
+  text-align: center;
+  text-transform: capitalize;
+  
+  
+  
+}
+.IdBooking form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
+  
+}
+.IdBooking form > div{
+  font-size: 30px;
+  
+}
+.IdBooking button{
+  background: var(--primary);
+  width: 100%;
+  padding: 5px;
+  
 }

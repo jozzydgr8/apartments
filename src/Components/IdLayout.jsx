@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
-import image from '../assets/WhatsApp Image 2024-09-08 at 07.37.12.jpeg'
 import Similar from './Similar'
 import { UseContextData } from '../ContextFolder/Context/UseContextData';
 import { useParams } from 'react-router-dom';
+import { DatePicker } from 'antd';
 export const IdLayout = ()=>{
     const [temp, setTemp] = useState(null);
     const {data} = UseContextData();
     const {id} = useParams();
+    const [guest, setGuest] = useState(1)
     useEffect(() => {
         const template = data && data.find(item => item.id === id);
 
@@ -89,12 +90,47 @@ if(!temp){
                 </div>
                 <div className="col-md-4">
                     <div className='IdBooking'>
-                        <h3 className='heading'>Book Now</h3>
+                        
                         <form>
-                            <input placeholder='checkin' /> <br />
-                            <input placeholder='checkout' />
-                            <input placeholder='guests'/>
-                            <input placeholder='' />
+                            <div className="row">
+                                <div className='col-md-6'>
+                                    <label>check in</label>
+                                    <br/>
+                                        <DatePicker/>
+                                    <br/>
+                                </div>
+                                <div className='col-md-6'>
+                                    <label>check out</label>
+                                    <br/>
+                                    <DatePicker/>
+                                    <br/>
+                                </div>
+                                <div className='col-md-6'>
+                                    <label>Guests</label>
+                                    <br/>
+
+                                    <span>{guest}</span>
+                                    <br/>
+                                    
+                                    <input type='range' min='1' max='8' value={guest}
+                                    onChange={(e)=>setGuest(e.target.value)}
+                                    /> <br />
+                                </div>
+                                <div className='col-md-6'>
+                                    <label>Nights</label>
+                                    <br/>
+                                    1
+                                    <br/>
+                                </div>
+
+                            
+                            
+
+                            
+                            
+                            
+                            </div>
+                            
                             <button type='submit'>Book Now</button>
                         </form>
                     </div>
