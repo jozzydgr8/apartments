@@ -8,7 +8,7 @@ export const RoomGrid = ({items})=>{
     return(
         <>
 
-        <Link key={items.id} className='r-grid col-md-4' to={items.id} >
+        <Link key={items.id} className='r-grid col-md-4' to={`/${items.id}`} >
             <div>
                 <div className="two" style={{backgroundImage:`url(${url})`}}>
 
