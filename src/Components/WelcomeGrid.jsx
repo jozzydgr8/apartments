@@ -5,7 +5,7 @@ import swimmingPool from '../assets/WhatsApp Image 2024-09-14 at 10.23.41.jpeg'
 function WelcomeGrid() {
   return (
     <>
-        <div className='row '>
+        <div className='row fSection'>
             <div className='col-md-4 w-grid '>
                 <div className='living'>
                     <div className='w-backdrop'>

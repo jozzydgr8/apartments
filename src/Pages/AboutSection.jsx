@@ -3,7 +3,7 @@ export const AboutSection = ()=>{
         <section>
             
                 <div className="row">
-                    <div className=" a-grid a-background col-md-6">
+                    <div className=" a-grid a-background col-md-6 aSection">
                         
                         
                     </div>
