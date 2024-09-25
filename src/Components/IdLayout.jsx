@@ -10,9 +10,7 @@ export const IdLayout = ()=>{
     const [temp, setTemp] = useState(null);
     const {data} = UseContextData();
     const {id} = useParams();
-    const {user} = UseContextAuth();
     const [guest, setGuest] = useState(1);
-    const [register, setRegister] = useState(null)
     useEffect(() => {
         const template = data && data.find(item => item.id === id);
 
@@ -30,13 +28,9 @@ export const IdLayout = ()=>{
     //functions component functions
     const handleBooking = async (e)=>{
         e.preventDefault();
-        if (!user){
-            setRegister('you need to register to save reservations on this website');
-            return
-        }
-
+        
     }
-    console.log(register)
+    
 if(!temp){
     return
 }
@@ -149,11 +143,12 @@ if(!temp){
                             
                             </div>
                             
-                           {register ? <Link className='regBtn' to='/register'>register now</Link> : <button type='submit' onClick={handleBooking}>Book Now</button>} 
+                            <button type='submit' onClick={handleBooking}><Link to="https://wa.link/b8xq56">Book Now</Link></button> 
+                            <Link to="https://wa.link/b8xq56">Reach out to us now</Link>
 
-                            {
-                                register && <Link to='/register'>{register}</Link>
-                            }
+                            
+                
+                            
                         </form>
                     </div>
                 </div>

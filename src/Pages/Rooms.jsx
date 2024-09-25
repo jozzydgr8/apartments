@@ -9,7 +9,7 @@ export const Rooms = ()=>{
                 <h1 className="heading" style={{textAlign:'center'}}>Our Rooms</h1>
                 <div className="row">
                     {
-                        data && data.map(items =>(
+                        data && data.slice(0,3).map(items =>(
                             <RoomGrid key={items.id} items={items}/>
                         ))
                     }

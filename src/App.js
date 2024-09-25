@@ -114,6 +114,7 @@ function App() {
         <Route index element={<Home/>} />
         <Route path=":id" element={<IdLayout/>} />
         <Route path="register" element={<Register/>}/>
+        
         </Route>
 
       </>
