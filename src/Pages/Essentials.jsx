@@ -1,10 +1,10 @@
 export const Essentials = ()=>{
     return(
-        <section id="services">
-            <div className="container-fluid">
-                <h1 className="heading" style={{textAlign:'center'}}>Our Essentials</h1>
+        <section id="services" >
+            <div className="container-fluid ">
+                <h1 className="heading fSection" style={{textAlign:'center'}}>Our Essentials</h1>
                 <>
-                <div className="row">
+                <div className="row aSection">
                     
                     <div className="col-md-6 e-grid">
                         <div>

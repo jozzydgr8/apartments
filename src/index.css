@@ -61,6 +61,16 @@ form button, .regBtn{
   text-transform: capitalize;
   color: black;
 }
+.sectionAnimation{
+  scroll-behavior: smooth;
+  animation: backInLeft;
+  animation-duration: 2.0s;
+}
+.sectionAnimationRight{
+  scroll-behavior: smooth;
+  animation: backInRight;
+  animation-duration: 1.5s;
+}
 .whatsappIcon{
   position: fixed;
   bottom: 20px;

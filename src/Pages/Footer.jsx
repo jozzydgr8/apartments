@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 export const Footer = ()=>{
     return(
         <section className="footer">
-            <div className="container-fluid" style={{backdropFilter:'brightness(30%) contrast(120%)'}}>
-                <div className="row">
+            <div className="container-fluid " style={{backdropFilter:'brightness(30%) contrast(120%)'}}>
+                <div className="row aSection">
                     <div className="col-md-4">
                         <div>
                             <h1 className="heading">About Mag's Resident</h1>

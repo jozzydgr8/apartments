@@ -86,6 +86,28 @@ function App() {
     }
 
     order();
+    const animation = ()=>{
+      var containers = document.querySelectorAll('.aSection');
+      var secondCont = document.querySelectorAll('.fSection');
+      var windowHeight = window.innerHeight;
+      secondCont.forEach(container=>{
+        var containerPosition = container.getBoundingClientRect().top;
+
+        if(containerPosition < windowHeight){
+          container.classList.add('sectionAnimationRight')
+        }
+
+      })
+      containers.forEach(container=>{
+        var containerPosition = container.getBoundingClientRect().top;
+
+        if(containerPosition < windowHeight){
+          container.classList.add('sectionAnimation')
+        }
+
+      })
+    }
+    window.addEventListener('scroll', animation);
 
   
         
@@ -94,6 +116,8 @@ function App() {
       order();
     }
   },[]);
+
+  
 
   if(loading || load){
     return(<>
