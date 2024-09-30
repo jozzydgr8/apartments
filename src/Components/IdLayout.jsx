@@ -3,9 +3,6 @@ import Similar from './Similar'
 import { UseContextData } from '../ContextFolder/Context/UseContextData';
 import { Link, useParams } from 'react-router-dom';
 import { DatePicker } from 'antd';
-import {UseContextAuth} from '../ContextFolder/Context/UseContextAuth'
-import { signOut } from 'firebase/auth';
-import { auth } from '../App';
 export const IdLayout = ()=>{
     const [temp, setTemp] = useState(null);
     const {data} = UseContextData();
@@ -28,6 +25,7 @@ export const IdLayout = ()=>{
     //functions component functions
     const handleBooking = async (e)=>{
         e.preventDefault();
+    
         
     }
     
@@ -143,7 +141,7 @@ if(!temp){
                             
                             </div>
                             
-                            <button type='submit' onClick={handleBooking}><Link to="https://wa.link/b8xq56">Book Now</Link></button> 
+                            <Link className='regBtn' to="https://wa.link/b8xq56">Book Now</Link>
                             <Link to="https://wa.link/b8xq56">Reach out to us now</Link>
 
                             
