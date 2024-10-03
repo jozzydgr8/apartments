@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import Similar from './Similar';
 import { UseContextData } from '../ContextFolder/Context/UseContextData';
 import { Link, useParams } from 'react-router-dom';
-import { Button, DatePicker } from 'antd';
+import { Button, DatePicker, message } from 'antd';
+import { CheckOut } from './CheckOut';
 
 export const IdLayout = () => {
     const [temp, setTemp] = useState(null);
@@ -11,6 +12,7 @@ export const IdLayout = () => {
     const [guest, setGuest] = useState(1);
     const [checkIn, setCheckIn] = useState(null);
     const [checkOut, setCheckOut] = useState(null);
+    const [OpenCheckOut, setOpenCheckOut] = useState(false)
 
     useEffect(() => {
         const template = data && data.find(item => item.id === id);
@@ -21,20 +23,14 @@ export const IdLayout = () => {
 
     const url = temp && temp.fileUrls && temp.fileUrls.map(item => item.url);
 
-    const handleBooking = (e) => {
+    
+    const openForm = (e)=>{
         e.preventDefault();
-
-        const message = `
-            *Booking Request*\n
-            Check In: ${checkIn}\n
-            Check Out: ${checkOut}\n
-            Guests: ${guest}
-        `.trim().replace(/\n/g, '%0A');
-
-        const whatsappURL = `https://wa.me/08113828486?text=${encodeURIComponent(message)}`;
-
-        window.open(whatsappURL, '_blank');
-    };
+        if(!checkIn || !checkOut){
+            return message.warning('please fill in all fields')
+        }
+        setOpenCheckOut(true)
+    }
 
     const calculateNights = (checkIn, checkOut) => {
         if (checkIn && checkOut) {
@@ -43,6 +39,7 @@ export const IdLayout = () => {
         }
         return 0;
     };
+    const nights = calculateNights(checkIn, checkOut)
 
     if (!temp) {
         return null; // Return null instead of nothing
@@ -94,9 +91,16 @@ export const IdLayout = () => {
                     </div>
                     <div className="col-md-4">
                         <div className='IdBooking'>
-                            <form onSubmit={handleBooking}>
+                            <form>
                                 <div className="row">
-                                    <div className='col-md-6'>
+                                    {
+                                        OpenCheckOut ?
+                                        <CheckOut apartment={temp.apartment} checkIn={checkIn} checkOut={checkOut}
+                                        guest={guest} nights={nights} price={temp.daily} />
+                                         :
+                                         <>
+                                         <div className='col-md-6'>
+                                        
                                         <label>Check In</label>
                                         <br />
                                         <DatePicker onChange={setCheckIn} />
@@ -121,12 +125,21 @@ export const IdLayout = () => {
                                     <div className='col-md-6'>
                                         <label>Nights</label>
                                         <br />
-                                        {calculateNights(checkIn, checkOut)} {/* Calculate nights dynamically */}
+                                        {nights}{/* Calculate nights dynamically */}
                                         <br />
                                     </div>
+                                         </>
+                                    }
+
+                                    
                                 </div>
-                                <button type='submit' className='regBtn'>Book Now</button>
-                                <Link to="https://wa.link/b8xq56">Reach out to us now</Link>
+                                {
+                                    !OpenCheckOut && <button type='submit' className='regBtn' onClick={openForm}>Book Now</button>
+                                }
+                                
+                                <a href="tel:+2348113657622">Reach Out To Us Now</a>
+
+                                {/* <Link to="https://wa.link/b8xq56">Reach out to us now</Link> */}
                             </form>
                         </div>
                     </div>
