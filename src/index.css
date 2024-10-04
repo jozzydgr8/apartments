@@ -26,6 +26,7 @@ code {
   --fontgaramond: "EB Garamond", serif;
   --primary:rgb(56, 56, 56);
   --secondary:#abb8c3;
+  --transition: 0.3s ease-in-out;
 }
 
 a{
@@ -42,6 +43,24 @@ a{
 .background{
   background-image: url('./assets/WhatsApp\ Image\ 2024-09-08\ at\ 07.37.12.jpeg');
 }
+.carousel-indicators button {
+  width: 14px;  
+  height: 14px; 
+  border-radius: 50%; 
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+  border: none; 
+  margin: 0 3px; 
+  transition: background-color 0.3s ease; 
+}
+
+.carousel-indicators button.active {
+  background-color: var(--offWhite); /* Change this to your desired active color (e.g., Bootstrap's primary color) */
+}
+
+.carousel-indicators {
+  bottom: 10px; 
+}
+
 
 .carousel-item, .IdBooking{
   height: 500px;
@@ -71,6 +90,7 @@ form button, .regBtn{
   animation: backInRight;
   animation-duration: 1.5s;
 }
+
 .whatsappIcon{
   position: fixed;
   bottom: 20px;
@@ -85,6 +105,23 @@ form button, .regBtn{
 section .container-fluid{
   padding: 5% 8%;
 }
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #25b09b;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
 
 
 /* //navbar navbar */
@@ -126,7 +163,7 @@ height: 100vh;
 .w-grid h3{
 text-transform: uppercase;
 }
-.living *, .bed *, .swimming *, .footer *, .a-grid *, .IdHeader *,form button, .regBtn{
+.living *, .bed *, .swimming *, .footer *, .a-grid *, .IdHeader *,form button, .regBtn, .r-grid main > div:hover{
   color: white;
 }
 .w-backdrop{
@@ -194,6 +231,11 @@ text-transform: uppercase;
   padding: 5px;
   text-align: center;
   cursor: pointer;
+}
+.r-grid main > div:hover{
+  background-color: var(--teal);
+  transition: var(--transition);
+  
 }
 .r-grid .one, .r-grid .two, .r-grid .three{
   height: 400px;

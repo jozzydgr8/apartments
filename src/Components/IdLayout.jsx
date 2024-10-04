@@ -12,7 +12,11 @@ export const IdLayout = () => {
     const [guest, setGuest] = useState(1);
     const [checkIn, setCheckIn] = useState(null);
     const [checkOut, setCheckOut] = useState(null);
-    const [OpenCheckOut, setOpenCheckOut] = useState(false)
+    const [OpenCheckOut, setOpenCheckOut] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+
+
 
     useEffect(() => {
         const template = data && data.find(item => item.id === id);
@@ -23,6 +27,20 @@ export const IdLayout = () => {
 
     const url = temp && temp.fileUrls && temp.fileUrls.map(item => item.url);
 
+    //carousel functioms
+    
+    const handleIndicatorClick = (index) => {
+        setActiveIndex(index);
+    };
+    const handleNext = () => {
+        setActiveIndex((prevIndex) => (prevIndex === temp.fileUrls.length - 1 ? 0 : prevIndex + 1));
+    };
+    const handlePrev = () => {
+        setActiveIndex((prevIndex) => (prevIndex === 0 ? temp.fileUrls.length - 1 : prevIndex - 1));
+    };
+
+
+    // form handling functions
     
     const openForm = (e)=>{
         e.preventDefault();
@@ -31,6 +49,8 @@ export const IdLayout = () => {
         }
         setOpenCheckOut(true)
     }
+
+    //calculate night
 
     const calculateNights = (checkIn, checkOut) => {
         if (checkIn && checkOut) {
@@ -42,7 +62,7 @@ export const IdLayout = () => {
     const nights = calculateNights(checkIn, checkOut)
 
     if (!temp) {
-        return null; // Return null instead of nothing
+        return ; // Return null instead of nothing
     }
 
     return (
@@ -57,22 +77,43 @@ export const IdLayout = () => {
                 <h1 className='heading'>{temp.apartment}</h1>
                 <div className="row">
                     <div className='col-md-8'>
-                        <div id="carouselExample" className="carousel slide">
-                            <div className="carousel-inner">
-                                {temp.fileUrls && temp.fileUrls.map((item, index) => (
-                                    <div key={index} style={{ backgroundImage: `url(${item.url})` }} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-                                    </div>
-                                ))}
-                            </div>
-                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Previous</span>
-                            </button>
-                            <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Next</span>
-                            </button>
-                        </div>
+                    <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+            <div className="carousel-indicators">
+                {temp.fileUrls.map((_, index) => (
+                    <button
+                        key={index}
+                        type="button"
+                        onClick={() => handleIndicatorClick(index)}
+                        className={activeIndex === index ? 'active' : ''}
+                        aria-current={activeIndex === index ? 'true' : 'false'}
+                        aria-label={`Slide ${index + 1}`}
+                    ></button>
+                ))}
+            </div>
+            <div className="carousel-inner">
+                {temp.fileUrls.map((item, index) => (
+                    <div
+                        key={index}
+                        className={`carousel-item ${activeIndex === index ? 'active' : ''}`}
+                        style={{
+                            backgroundImage: `url(${item.url})`,
+                            height: '400px',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }}
+                    ></div>
+                ))}
+            </div>
+            {/* Bootstrap Controls */}
+            <button className="carousel-control-prev" type="button" onClick={handlePrev}>
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+            </button>
+            <button className="carousel-control-next" type="button" onClick={handleNext}>
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+            </button>
+        </div>
 
                         <hr />
                         <p>{temp.overview}</p>
